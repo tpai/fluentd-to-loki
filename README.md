@@ -25,7 +25,7 @@ docker-compose up -d
 curl http://localhost:8080
 
 # send log via fluentd
-curl -X POST -d 'json={"foo":"bar"}' http://localhost:9880/app.log
+curl -X POST -d 'json={"message":"foo"}' http://localhost:9880/app.log
 ```
 
 3. View logs in Grafana:
