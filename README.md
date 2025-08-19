@@ -35,7 +35,7 @@ curl -X POST -d 'json={"foo":"bar"}' http://localhost:9880/app.log
 
 4. Query labels in Loki:
 ```bash
-docker-compose exec -it lokicli /bin/sh -c "logcli labels --addr=http://loki:3100"
+docker-compose exec -it logcli /bin/sh -c "logcli labels --addr=http://loki:3100"
 ```
 
 ## Services & Ports
