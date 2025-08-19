@@ -19,9 +19,13 @@ Collect application logs using Fluentd and send them to Loki for storage and vis
 docker-compose up -d
 ```
 
-2. Generate some logs by visiting the demo app:
+2. Generate some logs by :
 ```bash
+# visiting the demo app
 curl http://localhost:8080
+
+# send log via fluentd
+curl -X POST -d 'json={"foo":"bar"}' http://localhost:9880/app.log
 ```
 
 3. View logs in Grafana:
