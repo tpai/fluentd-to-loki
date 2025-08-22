@@ -10,5 +10,8 @@ Collect logs with Fluentd and send them to Elasticsearch for storage and visuali
 ### 📈 [Loki](./loki/)
 Collect logs with Fluentd and send them to Loki for storage and visualization with Grafana.
 
+### 🔍 [Opensearch](./opensearch/)
+Collect application logs using Fluentd and send them to OpenSearch.
+
 ### 🔍 [Splunk HEC](./splunk-hec/)
 Collect logs with Fluentd and send them to Splunk using HTTP Event Collector (HEC).
