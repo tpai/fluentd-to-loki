@@ -4,14 +4,14 @@ This repository contains Docker Compose examples demonstrating how to use Fluent
 
 ## Available Examples
 
-### 📊 [Elasticsearch](./elasticsearch/)
+### [Elasticsearch](./elasticsearch/)
 Collect logs with Fluentd and send them to Elasticsearch for storage and visualization with Kibana.
 
-### 📈 [Loki](./loki/)
+### [Loki](./loki/)
 Collect logs with Fluentd and send them to Loki for storage and visualization with Grafana.
 
-### 🔍 [Opensearch](./opensearch/)
+### [Opensearch](./opensearch/)
 Collect application logs using Fluentd and send them to OpenSearch.
 
-### 🔍 [Splunk HEC](./splunk-hec/)
+### [Splunk HEC](./splunk-hec/)
 Collect logs with Fluentd and send them to Splunk using HTTP Event Collector (HEC).
