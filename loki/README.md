@@ -29,9 +29,9 @@ curl -X POST -d 'json={"message":"foo"}' http://localhost:9880/app.log
 ```
 
 3. View logs in Grafana:
-   - Open http://localhost:3000 in your browser
+   - Open `http://localhost:3000` in your browser
    - Loki datasource is pre-configured
-   - Visit http://localhost:3000/a/grafana-lokiexplore-app/explore to search logs
+   - Visit `http://localhost:3000/a/grafana-lokiexplore-app/explore` to search logs
 
 4. Query labels in Loki:
 ```bash

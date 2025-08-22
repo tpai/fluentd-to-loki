@@ -1,0 +1,45 @@
+services:
+  app:
+    image: nginx:alpine
+    container_name: demo-app
+    ports:
+      - "8080:80"
+    logging:
+      driver: "fluentd"
+      options:
+        fluentd-address: localhost:24224
+        tag: httpd.access
+    depends_on:
+      - fluentd
+
+  fluentd:
+    build: ./fluentd
+    container_name: fluentd
+    volumes:
+      - ./fluentd:/fluentd
+    environment:
+      SPLUNK_HEC_URL: "http://splunk:8088"
+      SPLUNK_HEC_TOKEN: "abcd1234-ef56-7890-abcd-1234567890ab"
+    ports:
+      - "24224:24224"
+      - "9880:9880"
+    command: ["fluentd", "-c", "/fluentd/fluent.conf", "-v"]
+    restart: unless-stopped
+    depends_on:
+      - splunk
+
+  splunk:
+    image: splunk/splunk:9.4
+    container_name: splunk
+    environment:
+      - SPLUNK_START_ARGS=--accept-license
+      - SPLUNK_HEC_TOKEN=abcd1234-ef56-7890-abcd-1234567890ab
+      - SPLUNK_PASSWORD=password
+    ports:
+      - "8000:8000"
+      - "8088:8088"
+    volumes:
+      - splunk-data:/opt/splunk/var
+
+volumes:
+  splunk-data:
