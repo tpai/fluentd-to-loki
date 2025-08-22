@@ -1,0 +1,14 @@
+# Fluentd Integration Examples
+
+This repository contains Docker Compose examples demonstrating how to use Fluentd to collect and forward logs to different log aggregation systems.
+
+## Available Examples
+
+### 📊 [Elasticsearch](./elasticsearch/)
+Collect logs with Fluentd and send them to Elasticsearch for storage and visualization with Kibana.
+
+### 📈 [Loki](./loki/)
+Collect logs with Fluentd and send them to Loki for storage and visualization with Grafana.
+
+### 🔍 [Splunk HEC](./splunk-hec/)
+Collect logs with Fluentd and send them to Splunk using HTTP Event Collector (HEC).
